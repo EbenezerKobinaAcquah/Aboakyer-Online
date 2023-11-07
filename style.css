@@ -952,9 +952,11 @@ body {
 ------------------------------------------------------------*/
 .about-us {
     background: url("images/Cover.jpg") no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
 }
+
 
 /*------------------------------------------------------------
 # site-header
