@@ -4,7 +4,10 @@
 .flex {
     display: flex;
 }
-
+.background{
+    background: url("images/Cover.jpg") no-repeat;
+    background-size: cover;
+}
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
@@ -951,7 +954,6 @@ body {
 # about-us
 ------------------------------------------------------------*/
 .about-us {
-    background: url("images/Cover.jpg") no-repeat;
     width: 100%;
     height: 100%;
 }
@@ -1499,14 +1501,14 @@ body {
 .blog-page {
     width: 100%;
     height: 100%;
-    background: url("images/Cover.jpg") no-repeat;
+    
 }
 
 /*------------------------------------------------------------
 # site-header
 ------------------------------------------------------------*/
 .blog-page .page-header {
-    background-size: cover;
+    
 }
 
 .blog-list-page .single-blog-content {
@@ -1739,11 +1741,11 @@ body {
 # elements-page
 ------------------------------------------------------------*/
 .elements-page {
-    background: url("images/Cover.jpg") no-repeat;
+    
 }
 
 .elements-page .page-header {
-    background-size: cover;
+   
 }
 
 .elements-page .elements-wrap {
