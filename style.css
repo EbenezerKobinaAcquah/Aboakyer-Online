@@ -952,7 +952,6 @@ body {
 ------------------------------------------------------------*/
 .about-us {
     background: url("images/Cover.jpg") no-repeat;
-    background-size: cover;
     width: 100%;
     height: 100%;
 }
@@ -962,7 +961,7 @@ body {
 # site-header
 ------------------------------------------------------------*/
 .about-us .site-header {
-    
+    background-size: cover;
 }
 
 .about-us .site-header figure {
@@ -1507,7 +1506,7 @@ body {
 # site-header
 ------------------------------------------------------------*/
 .blog-page .page-header {
-    
+    background-size: cover;
 }
 
 .blog-list-page .single-blog-content {
@@ -1740,12 +1739,11 @@ body {
 # elements-page
 ------------------------------------------------------------*/
 .elements-page {
-    background-color: white;
     background: url("images/Cover.jpg") no-repeat;
 }
 
 .elements-page .page-header {
-    
+    background-size: cover;
 }
 
 .elements-page .elements-wrap {
