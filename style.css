@@ -233,6 +233,8 @@ body {
 .hero-content {
     padding: 220px 0 0 0;
     position: relative;
+}
+.black{
     background-color: black;
 }
 
