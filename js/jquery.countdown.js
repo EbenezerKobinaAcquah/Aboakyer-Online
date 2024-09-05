@@ -22,20 +22,23 @@
 (function(factory) {
     "use strict";
     if (typeof define === "function" && define.amd) {
-        define([ "jquery" ], factory);
+        define(["jquery"], factory);
     } else {
         factory(jQuery);
     }
 })(function($) {
     "use strict";
+
     var instances = [], matchers = [], defaultOptions = {
         precision: 100,
         elapse: false
     };
+    
     matchers.push(/^[0-9]*$/.source);
     matchers.push(/([0-9]{1,2}\/){2}[0-9]{4}( [0-9]{1,2}(:[0-9]{2}){2})?/.source);
     matchers.push(/[0-9]{4}([\/\-][0-9]{1,2}){2}( [0-9]{1,2}(:[0-9]{2}){2})?/.source);
     matchers = new RegExp(matchers.join("|"));
+    
     function parseDateString(dateString) {
         if (dateString instanceof Date) {
             return dateString;
@@ -52,6 +55,17 @@
             throw new Error("Couldn't cast `" + dateString + "` to a date object.");
         }
     }
+    
+    function getFirstWeekOfMay() {
+        var year = new Date().getFullYear();
+        var mayFirst = new Date(year, 4, 1); // May 1st of the current year
+        var day = mayFirst.getDay();
+        var offset = (day === 0) ? 1 : (7 - day + 1); // Calculate first Monday
+        return new Date(year, 4, offset); // First week of May
+    }
+
+    var finalDate = getFirstWeekOfMay();
+    
     var DIRECTIVE_KEY_MAP = {
         Y: "years",
         m: "months",
@@ -62,6 +76,7 @@
         H: "hours",
         M: "minutes",
         S: "seconds"
+
     };
     function escapedRegExp(str) {
         var sanitize = str.toString().replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1");
